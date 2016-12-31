@@ -1,0 +1,11 @@
+---
+
+- name: Deploy keys
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  roles:
+    - { role: deploy-keys }
+  vars_files:
+    - 'group_vars/localhost/vars.yml'
+    - 'group_vars/localhost/vault.yml'

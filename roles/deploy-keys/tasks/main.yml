@@ -1,0 +1,7 @@
+---
+# tasks file for deploy-keys
+
+- name: Copy keys in the tmp directory on the remote server.
+  copy:
+    content: "{{ my_secret_key }}"
+    dest: /tmp/keys.txt
